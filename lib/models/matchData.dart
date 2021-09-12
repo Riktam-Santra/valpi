@@ -1,12 +1,12 @@
-class MatchData {
+class RecentMatches {
   late MatchInfoDto matchinfo;
   late List<PlayerDto> players;
   late List<CoachDto> coaches;
   late List<TeamDto> teams;
   late List<RoundResultDto> roundResuts;
-  MatchData(
+  RecentMatches(
       this.matchinfo, this.players, this.coaches, this.teams, this.roundResuts);
-  MatchData.fromJson(Map<String, dynamic> json) {
+  RecentMatches.fromJson(Map<String, dynamic> json) {
     matchinfo = MatchInfoDto.fromJson(json['matchinfo']!);
     players = <PlayerDto>[];
     json['players']!.forEach((v) {
